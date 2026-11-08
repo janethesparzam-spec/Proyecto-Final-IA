@@ -248,3 +248,4 @@ def ejecutar_agentes(ticket):
         'soporte': salidas[1],
         'seguimiento': salidas[2],
     }
+

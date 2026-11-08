@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.db
+*.db-journal
+*.log
+Respaldo_Version_Anterior/

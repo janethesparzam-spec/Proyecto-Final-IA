@@ -1,0 +1,3 @@
+crewai>=1.15,<2
+streamlit>=1.40,<2
+litellm>=1.70,<2

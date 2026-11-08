@@ -372,6 +372,44 @@ with tab2:
             f'</div></div>',
             unsafe_allow_html=True,
         )
+
+        # ---------------------------------------------------------
+        # APORTE STREAMLIT - RESUMEN EJECUTIVO DEL TICKET - JORGE
+        # ---------------------------------------------------------
+
+        st.markdown("### Resumen ejecutivo del ticket")
+
+        r1, r2, r3, r4, r5 = st.columns(5)
+
+        r1.metric(
+            "Riesgo",
+            f'{t["puntuacion"]}/100'
+        )
+
+        r2.metric(
+            "Prioridad",
+            str(t["prioridad"])
+        )
+
+        r3.metric(
+            "Estado",
+            str(t["estado"])
+        )
+
+        r4.metric(
+            "Usuarios afectados",
+            int(t["usuarios_afectados"])
+        )
+
+        r5.metric(
+            "Dependencias",
+            int(t["dependencias"])
+        )
+
+        # ---------------------------------------------------------
+        # FIN DEL RESUMEN EJECUTIVO DEL TICKET - JORGE
+        # ---------------------------------------------------------
+
         with st.expander("Factores utilizados para el cálculo de riesgo"):
             st.json(json.loads(t["factores_json"]))
         if st.button("Analizar incidencia con 3 agentes", type="primary"):
